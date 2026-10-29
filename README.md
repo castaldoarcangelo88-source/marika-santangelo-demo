@@ -1,5 +1,7 @@
 # Marika Santangelo — PWA catalogo in staging
 
+> Questa cartella è una copia locale per sviluppare gli appuntamenti con Supabase. Il codice qui sotto è ancora quello della demo statica e non è collegato a un database. Stato e decisioni aperte: `DATABASE_STAGING_PLAN.md`.
+
 Bozza isolata creata il 2026-10-28. Repository pubblico della demo: `https://github.com/castaldoarcangelo88-source/marika-santangelo-demo`, branch sorgente `staging/demo`. Demo GitHub Pages verificata il 2026-10-29: `https://castaldoarcangelo88-source.github.io/marika-santangelo-demo/`. Nessun backend o database è collegato. Per la prova locale, aprire con un server HTTP (per esempio `python -m http.server 8765` dalla cartella); `file://` non abilita il service worker.
 
 Il 2026-10-29 la grafica è stata compattata su mobile e desktop: sezioni più ravvicinate, schede più basse e calendario meno dispersivo. Il foglio di stile è richiamato come `style.css?v=5` per evitare che l'anteprima mostri la vecchia versione in cache.

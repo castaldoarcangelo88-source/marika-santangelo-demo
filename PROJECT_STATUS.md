@@ -1,5 +1,7 @@
 # Stato PWA Marika Santangelo
 
+> Copia di lavoro per la versione Supabase del 2026-10-29. Questa cartella non è pubblicata e non è collegata a un database. Le verifiche sotto descrivono la demo statica di partenza. Vedere `DATABASE_STAGING_PLAN.md` per lo stato del nuovo lavoro.
+
 Data: 2026-10-29. Ambiente: staging locale e demo pubblica GitHub Pages dal branch `staging/demo` di `castaldoarcangelo88-source/marika-santangelo-demo`, senza backend. URL: `https://castaldoarcangelo88-source.github.io/marika-santangelo-demo/`.
 
 ## Pronto
