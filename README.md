@@ -1,6 +1,6 @@
 # Marika Santangelo — PWA catalogo in staging
 
-Bozza isolata creata il 2026-10-28. Repository pubblico della demo: `castaldoarcangelo88-source/marika-santangelo-demo`, branch sorgente `staging/demo`. La pubblicazione GitHub Pages va verificata separatamente; nessun backend o database è collegato. Per la prova locale, aprire con un server HTTP (per esempio `python -m http.server 8765` dalla cartella); `file://` non abilita il service worker.
+Bozza isolata creata il 2026-10-28. Repository pubblico della demo: `https://github.com/castaldoarcangelo88-source/marika-santangelo-demo`, branch sorgente `staging/demo`. Demo GitHub Pages verificata il 2026-10-29: `https://castaldoarcangelo88-source.github.io/marika-santangelo-demo/`. Nessun backend o database è collegato. Per la prova locale, aprire con un server HTTP (per esempio `python -m http.server 8765` dalla cartella); `file://` non abilita il service worker.
 
 Il 2026-10-29 la grafica è stata compattata su mobile e desktop: sezioni più ravvicinate, schede più basse e calendario meno dispersivo. Il foglio di stile è richiamato come `style.css?v=5` per evitare che l'anteprima mostri la vecchia versione in cache.
 
@@ -19,4 +19,4 @@ Far approvare direttamente da Marika il logo, il listino trascritto dal Titolare
 
 ## Rollback
 
-Per lo staging locale, conservare questa cartella e registrare ogni modifica in `SESSION_LOG.md`. Il branch `main` del repository contiene il README iniziale e costituisce la base intatta; la demo vive su `staging/demo`. Prima di aggiornare il link pubblico, annotare il commit corrente e ripristinarlo tramite un commit di revert sul branch `staging/demo` se necessario. GitHub Pages va disattivato dalle impostazioni del repository per ritirare la demo pubblica.
+Per lo staging locale, conservare questa cartella e registrare ogni modifica in `SESSION_LOG.md`. Il branch `main` del repository contiene il README iniziale e costituisce la base intatta; la demo vive su `staging/demo`. Primo commit della PWA pubblicata: `4d8b6f8af065c38add4273ecf7d93ca8d11bc664`. Per ritirare la demo, aprire `https://github.com/castaldoarcangelo88-source/marika-santangelo-demo/settings/pages`, selezionare `None` come branch e salvare. Per annullare un futuro commit dell'app senza force push: `git switch staging/demo`, `git revert --no-edit <SHA_DEL_COMMIT>` e `git push origin staging/demo` da un clone autenticato; verificare poi il sito pubblico.
