@@ -18,6 +18,12 @@ if (bookingForm) {
   let chosenDate = null;
   const dateFormatter = new Intl.DateTimeFormat('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   const monthFormatter = new Intl.DateTimeFormat('it-IT', { month: 'long', year: 'numeric' });
+  const durationMinutes = new Map([
+    ['One to one — € 30', 150], ['Soft volume — € 40', 150], ['Mega volume — € 50', 150],
+    ['Laminazione ciglia — € 25', 45], ['Laminazione sopracciglia — € 25', 30],
+    ['Ciglia + sopracciglia — € 40', 75], ['Ceretta baffetto e sopracciglia — € 5', 5],
+    ['Filo arabo viso — € 10', 15], ['Mento — € 5', 6],
+  ]);
 
   function renderCalendar() {
     monthLabel.textContent = monthFormatter.format(visibleMonth);
@@ -80,9 +86,14 @@ if (bookingForm) {
       feedback.textContent = 'Scegli un orario futuro.';
       return;
     }
+    const closingTime = new Date(chosenDate.getFullYear(), chosenDate.getMonth(), chosenDate.getDate(), 18, 0);
+    if (requestTime.getTime() + (durationMinutes.get(service) || 0) * 60000 > closingTime.getTime()) {
+      feedback.textContent = 'Scegli un orario che consenta di terminare il trattamento entro le 18:00.';
+      return;
+    }
     const message = `Ciao Marika, vorrei chiedere un appuntamento per ${service} il ${dateFormatter.format(chosenDate)} alle ${time}. Puoi confermarmi la disponibilità?`;
-    feedback.textContent = 'Si apre WhatsApp con il testo pronto. Seleziona manualmente il contatto di Marika: il numero diretto non è ancora configurato.';
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    feedback.textContent = 'Si apre WhatsApp con il messaggio pronto. La richiesta sarà inviata solo dopo la tua conferma.';
+    window.open(`https://wa.me/393926501875?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   });
   renderCalendar();
 }

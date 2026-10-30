@@ -1,5 +1,5 @@
-const CACHE_NAME = 'marika-catalogo-v5';
-const APP_ASSETS = ['./', './index.html', './style.css?v=5', './app.js', './manifest.webmanifest', './assets/marika-logo.jpg', './assets/icon-192.png', './assets/icon-512.png'];
+const CACHE_NAME = 'marika-catalogo-v8';
+const APP_ASSETS = ['./', './index.html', './style.css?v=8', './app.js', './manifest.webmanifest', './assets/marika-logo.jpg', './assets/icon-192.png', './assets/icon-512.png'];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_ASSETS)).then(() => self.skipWaiting()));
 });
@@ -11,5 +11,5 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(fetch(event.request).then((response) => {
     if (response.ok) { const copy = response.clone(); caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)); }
     return response;
-  }).catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html'))));
+  }).catch(() => caches.match(event.request).then((cached) => cached || (event.request.mode === 'navigate' ? caches.match('./index.html') : Response.error()))));
 });

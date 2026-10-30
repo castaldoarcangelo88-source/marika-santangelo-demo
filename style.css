@@ -51,3 +51,92 @@
  .info-section{padding:55px 21px 60px}.info-section h2{margin-bottom:30px}.info-grid{gap:19px}.info-grid h3{font-size:21px;margin:10px 0 6px}.info-grid p{line-height:1.6}
  .site-footer{padding:25px 21px}.site-footer p{margin:11px 0}
 }
+.booking-result{display:grid;gap:12px;margin-top:20px;padding:20px;border:1px solid #e6d4dd;border-radius:10px;background:#fff;color:#493740}.booking-result[hidden]{display:none}.booking-result strong{font:500 24px 'Playfair Display',Georgia,serif}.booking-result p{margin:0;line-height:1.6}.booking-result a,.booking-result button{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px;border:1px solid #a75c80;border-radius:6px;background:#fff;color:#8e486c;font:600 13px 'DM Sans',Arial,sans-serif;text-decoration:none;cursor:pointer}.booking-result a:hover,.booking-result button:hover{background:#f8f0f3}#cancellation-panel[hidden]{display:none}
+
+/* Layout compatto v8: spazio ridotto, gerarchia e leggibilità preservate. */
+.site-header{height:68px}
+.hero{min-height:425px}
+.hero-content{padding-top:48px;padding-bottom:34px}
+.hero h1{font-size:clamp(46px,4.6vw,66px);margin:15px 0 14px}
+.hero-text{line-height:1.62}
+.hero-actions{margin-top:20px}
+.hero-facts{margin-top:28px}
+.hero-visual{min-height:425px}
+.visual-orbit{width:470px;height:470px}.orbit-two{width:365px;height:365px}
+.visual-card{width:min(55%,315px)}
+.visual-label{bottom:10%}
+.intro{min-height:70px;padding-block:12px}
+.services{padding-top:52px;padding-bottom:56px}
+.section-head{margin-bottom:28px}
+.section-head h2,.info-section h2{font-size:clamp(36px,3.2vw,47px)}
+.section-head>p{max-width:300px}
+.category-header{padding-bottom:10px;margin-bottom:13px}
+.featured-card{height:190px;padding:16px 18px}
+.card-art,.art-two,.art-three{font-size:76px;opacity:.55}
+.card-bottom h3{font-size:22px}
+.secondary-category{margin-top:37px}
+.service-list article{min-height:68px;padding:13px 0}
+.service-list h3{font-size:17px}
+.booking-section{padding-top:52px;padding-bottom:56px}
+.booking-heading{margin-bottom:21px}
+.booking-heading h2{font-size:clamp(36px,3.2vw,47px)}
+.booking-form{gap:26px;padding:26px;box-shadow:0 12px 28px #9c5e7c0d}
+.booking-fields{gap:12px}
+.booking-fields label{gap:6px}
+.booking-fields select,.booking-fields input{min-height:44px}
+.calendar-wrap{padding:12px}
+.calendar-header{margin-bottom:10px}
+.booking-action>p{line-height:1.55}
+.info-section{padding-top:52px;padding-bottom:58px}
+.info-section h2{margin-bottom:26px}
+.info-grid{gap:22px}
+.info-grid h3{font-size:20px;margin:10px 0 7px}
+.site-footer{padding-block:22px}
+@media(min-width:651px){
+ .booking-fields{grid-template-columns:repeat(2,minmax(0,1fr));align-items:end}
+ .booking-fields .calendar-wrap{grid-column:1/-1}
+}
+@media(max-width:900px){
+ .hero-visual{min-height:405px}
+ .visual-orbit{width:420px;height:420px}.orbit-two{width:325px;height:325px}
+}
+@media(max-width:650px){
+ .site-header{height:62px}
+ .hero-content{padding:28px 20px 2px}
+ .hero h1{font-size:clamp(40px,10vw,50px);margin:12px 0 10px}
+ .hero-text{font-size:13px;line-height:1.55}
+ .hero-actions{margin-top:16px}
+ .hero-facts{margin-top:18px}
+ .hero-visual{height:208px;min-height:208px}
+ .visual-orbit{width:290px;height:290px;transform:translate(0,9px)}
+ .orbit-two{width:220px;height:220px}
+ .visual-card{width:172px}
+ .visual-label{bottom:4px;padding:6px 8px;font-size:7px}
+ .intro{min-height:60px;padding:11px 18px}
+ .intro p:nth-child(2){font-size:16px;line-height:1.35}
+ .services{padding:38px 18px 42px}
+ .section-head{margin-bottom:20px}
+ .section-head h2,.info-section h2{font-size:36px}
+ .section-head>p{margin-top:8px}
+ .category-header{margin-bottom:9px}
+ .service-grid{gap:8px}
+ .featured-card{height:118px;padding:12px 14px}
+ .card-art,.art-two,.art-three{font-size:65px;right:18%;top:0}
+ .card-bottom h3{font-size:20px}
+ .card-bottom strong{font-size:18px}
+ .secondary-category{margin-top:25px}
+ .service-list article{min-height:62px;padding:11px 0}
+ .service-list h3{font-size:16px}
+ .booking-section{padding:38px 18px 42px}
+ .booking-heading{margin-bottom:17px}
+ .booking-heading h2{font-size:36px}
+ .booking-form{padding:15px;gap:12px}
+ .booking-fields{gap:11px}
+ .calendar-wrap{padding:11px}
+ .booking-action .button{margin-top:5px}
+ .info-section{padding:42px 19px 46px}
+ .info-section h2{margin-bottom:22px}
+ .info-grid{gap:16px}
+ .info-grid h3{font-size:19px;margin:8px 0 5px}
+ .site-footer{padding:20px 19px}
+}
